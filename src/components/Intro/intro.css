@@ -31,10 +31,6 @@
     transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 
-.introName {
-    color: #ffe066;
-}
-
 .intro-img:hover {
     border-color: #232526;
     transform: scale(1.08) rotate(-2deg);
@@ -48,6 +44,9 @@
     color: inherit;
     text-align: center;
     transition: color 0.3s;
+}
+.introName {
+    color: #ffe066;
 }
 
 .intro-desc {
@@ -108,6 +107,10 @@
     font-size: 1.75rem;
     font-weight: 100;
 }
+
+/* .introName {
+    color: yellow;
+} */
 
 .introPara {
     font-size: medium;
