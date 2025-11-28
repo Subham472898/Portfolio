@@ -169,3 +169,36 @@
     background-color: #ffe066;
     color: #232526;
 }
+
+@media screen and (max-width:600px) {
+    .worksTitle {
+        font-size: 2rem;
+        padding: 0 1rem;
+        text-align: center;
+        word-break: break-word;
+    }
+    .worksDesc {
+        font-size: 1rem;
+        padding: 0 1rem;
+        text-align: center;
+        max-width: 95vw;
+        word-break: break-word;
+    }
+    .worksImgs {
+        flex-direction: column;
+        gap: 1.2rem;
+        width: 100vw;
+        max-width: 100vw;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .projectBox {
+        width: 90vw;
+        max-width: 95vw;
+        margin: 1.2rem auto;
+        box-sizing: border-box;
+        display: block;
+        position: static;
+    }
+}
