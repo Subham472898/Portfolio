@@ -1,6 +1,6 @@
 /* Modern Navbar Styles */
 .navbar {
-    background: linear-gradient(90deg, #ffe066 60%, #fffbe6 100%) !important;
+    background: #ffe066 !important;
     color: #232526 !important;
     height: 5rem;
     width: 100vw;
@@ -116,12 +116,16 @@
 .mobMenu {
     display: none;
     object-fit: cover;
-    height: 2.4rem;
-    width: 2.4rem;
+    height: 2.8rem;
+    width: 2.8rem;
     cursor: pointer;
     border-radius: 0.5rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.10);
     transition: box-shadow 0.2s, background 0.2s;
+    z-index: 10;
+    top: 1.2rem;
+    right: 1.2rem;
+    background: transparent !important;
 }
 .mobMenu:focus, .mobMenu:hover {
     background: #ffe066;
@@ -204,9 +208,36 @@
     backdrop-filter: blur(8px);
   }
   .desktopMenu {
+    display: none;
+  }
+  .desktopMenuBtn {
+    display: none !important;
+  }
+  .mobMenu {
+    display: block !important;
+    height: 2.8rem;
+    width: 2.8rem;
+    margin-top: 0.5rem;
+    top: 1.2rem;
+    right: 1.2rem;
+  }
+  .navMenu {
+    display: flex !important;
     flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
+    position: absolute;
+    top: 4.5rem;
+    right: 1rem;
+    width: 70vw;
+    max-width: 320px;
+    background: rgba(255, 224, 102, 0.95);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    border-radius: 1rem;
+    padding: 1.5rem 1rem;
+    z-index: 99;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    transition: opacity 0.3s, transform 0.3s;
   }
   .desktopMenuListItem {
     margin: 0.5rem 0;
@@ -218,42 +249,6 @@
     margin: 0.5rem 0;
     font-size: 1.1rem;
     padding: 0.5rem 0;
-  }
-  .desktopMenu, .desktopMenuBtn {
-    display: none !important;
-  }
-  .mobMenu {
-    display: block !important;
-    height: 2.4rem;
-    width: 2.4rem;
-    margin-top: 0.5rem;
-  }
-  .navMenu {
-    display: flex !important;
-    flex-direction: column;
-    position: fixed;
-    top: 5.5rem;
-    right: 1rem;
-    left: auto;
-    width: 90vw;
-    background: rgba(255, 224, 102, 0.7);
-    backdrop-filter: blur(16px);
-    z-index: 100;
-    padding: 1.5rem 0 1.5rem 0;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-    border-radius: 1.5rem;
-    align-items: center;
-    justify-content: center;
-    max-width: 400px;
-    opacity: 0;
-    transform: translateY(-20px);
-    pointer-events: none;
-    transition: opacity 0.3s, transform 0.3s;
-  }
-  .navMenu.open {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
   }
   .listItem {
     color: #232526;
