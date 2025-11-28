@@ -33,7 +33,7 @@ const Contact = () => (
             <h2 className="contactPageTitle">Contact Me</h2>
             <p className="contactDesc">Let's connect! Fill out the form below to discuss any work opportunities or collaborations.</p>
             <form className="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="YOUR_WEB3FORM_API_KEY" />
+                <input type="hidden" name="access_key" value="3b374baa-a7cb-495e-b1d5-6cc83aa6d053" />
                 <input type="text" className="name" placeholder="Your name" name="name" required />
                 <input type="email" className="email" placeholder="Your Email" name="email" required />
                 <textarea name="message" placeholder="Your Message" rows={5} className="msg" required></textarea>
