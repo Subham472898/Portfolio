@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './navbar.css';
 import { Link } from 'react-scroll';
+import contactIcon from '../../assets/contact.png';
+import menuIcon from '../../assets/menu.png';
 
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -17,10 +19,10 @@ const Navbar = () => {
                 <button className="desktopMenuBtn" id="desktopMenuBtn" style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-end', marginLeft: 'auto', gap: '0.5rem'}} onClick={() => {
                     document.getElementById('contact').scrollIntoView({behavior: 'smooth'});
                 }}>
-                    <img src={require('../../assets/contact.png')} alt="Contact" style={{height: '1.5rem', marginRight: '0.5rem'}} />
+                    <img src={contactIcon} alt="Contact" style={{height: '1.5rem', marginRight: '0.5rem'}} />
                     Contact
                 </button>
-                <img src={require('../../assets/menu.png')} alt="Menu" className="mobMenu" style={{position: 'absolute', right: '1.5rem', top: '1.5rem'}} onClick={() => setShowMenu(!showMenu)} />
+                <img src={menuIcon} alt="Menu" className="mobMenu" style={{position: 'absolute', right: '1.5rem', top: '1.5rem'}} onClick={() => setShowMenu(!showMenu)} />
                 
                 {/* Mobile menu: show all links only when menu.png is clicked */}
                 {showMenu && (
