@@ -79,3 +79,24 @@
     width: 100vw;
     box-sizing: border-box;
 }
+
+/* Footer mobile adjustments */
+@media screen and (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    font-size: 0.95rem;
+    padding: 1rem 0.5rem;
+    text-align: center;
+  }
+  .footer-content {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+  .footer-right ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0;
+  }
+}
