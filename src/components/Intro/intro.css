@@ -31,6 +31,10 @@
     transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 
+introName {
+    color: #ffe066;
+}
+
 .intro-img:hover {
     border-color: #232526;
     transform: scale(1.08) rotate(-2deg);
