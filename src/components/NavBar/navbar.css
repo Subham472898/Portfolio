@@ -1,7 +1,7 @@
 /* Modern Navbar Styles */
 .navbar {
-    background: #ffe066 !important;
-    color: #000 !important;
+    background: linear-gradient(90deg, #ffe066 60%, #fffbe6 100%) !important;
+    color: #232526 !important;
     height: 5rem;
     width: 100vw;
     margin: 0;
@@ -11,9 +11,12 @@
     justify-content: space-between;
     position: sticky;
     top: 0;
-    z-index: 10;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    left: 0;
+    z-index: 100;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.10);
     transition: background 0.3s, color 0.3s;
+    backdrop-filter: blur(2px);
 }
 
 .light-theme .navbar {
@@ -42,10 +45,17 @@
     color: inherit;
     transition: color 0.3s, border-bottom 0.3s;
     padding-bottom: 0.2rem;
+    border-radius: 0.5rem;
 }
-.desktopMenuListItem:hover {
-    color: #ffe066;
-    border-bottom: 3px solid #ffe066;
+.desktopMenuListItem:hover, .desktopMenuListItem:focus {
+    color: #232526;
+    background: #ffe066;
+    border-radius: 0.5rem;
+    border-bottom: none;
+}
+.desktopMenuListItem:focus {
+    outline: 2px solid #232526;
+    outline-offset: 2px;
 }
 .desktopMenuListItem[href*="works"]::after {
     content: "Projects";
@@ -55,27 +65,35 @@
     margin-left: 0.5rem;
 }
 .active {
-    color: #ffe066;
-    border-bottom: 3px solid #ffe066;
+    color: #232526;
+    background: #ffe066;
+    border-radius: 0.5rem;
+    border-bottom: none;
 }
 
 .desktopMenuBtn {
-    background: #ffe066;
-    color: #232526;
+    background: #232526;
+    color: #ffe066;
     border: none;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-left: auto;
     padding: 0 1.2rem;
     border-radius: 2rem;
     font-weight: 600;
     font-size: 1rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     transition: background 0.3s, color 0.3s;
+    gap: 0.5rem;
+}
+.desktopMenuBtn img {
+    height: 1.5rem;
+    margin-right: 0.5rem;
 }
 .desktopMenuBtn:hover {
-    background: #232526;
-    color: #ffe066;
+    background: #ffe066;
+    color: #232526;
 }
 
 .themeBtn {
@@ -98,7 +116,16 @@
 .mobMenu {
     display: none;
     object-fit: cover;
-    height: 1.8rem;
+    height: 2.4rem;
+    width: 2.4rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: box-shadow 0.2s, background 0.2s;
+}
+.mobMenu:focus, .mobMenu:hover {
+    background: #ffe066;
+    box-shadow: 0 4px 16px rgba(255,224,102,0.18);
 }
 
 .navMenu {
@@ -110,21 +137,38 @@
     flex-direction: column;
     padding: 0.5rem;
     min-width: 15rem;
-    background: #232526;
+    background: rgba(255, 224, 102, 0.7);
     border-radius: 1rem;
     box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+    backdrop-filter: blur(16px);
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+}
+.navMenu.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 .listItem {
-    color: #fff;
+    color: #232526;
     padding: 0.5rem 3rem;
     margin: 0.25rem;
-    background: #232526;
+    background: none;
     border-radius: 0.5rem;
     font-size: 1.1rem;
     font-weight: 500;
     transition: background 0.3s, color 0.3s;
+    text-align: center;
 }
-.listItem:hover {
+.listItem:hover, .listItem:focus {
+    background: #232526;
+    color: #ffe066;
+}
+.listItem:focus {
+    outline: 2px solid #232526;
+    outline-offset: 2px;
     background: #ffe066;
     color: #232526;
 }
@@ -148,4 +192,113 @@
     .desktopMenuBtn {
         display: none;
     }
+}
+
+/* Navbar mobile adjustments */
+@media screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 0.5rem 1rem;
+    align-items: flex-start;
+    backdrop-filter: blur(8px);
+  }
+  .desktopMenu {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .desktopMenuListItem {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
+  }
+  .desktopMenuBtn {
+    width: 100%;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+  }
+  .desktopMenu, .desktopMenuBtn {
+    display: none !important;
+  }
+  .mobMenu {
+    display: block !important;
+    height: 2.4rem;
+    width: 2.4rem;
+    margin-top: 0.5rem;
+  }
+  .navMenu {
+    display: flex !important;
+    flex-direction: column;
+    position: fixed;
+    top: 5.5rem;
+    right: 1rem;
+    left: auto;
+    width: 90vw;
+    background: rgba(255, 224, 102, 0.7);
+    backdrop-filter: blur(16px);
+    z-index: 100;
+    padding: 1.5rem 0 1.5rem 0;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    border-radius: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  .navMenu.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .listItem {
+    color: #232526;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 0.8rem 0;
+    text-align: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 1rem;
+    margin: 0.2rem 0;
+  }
+}
+@media screen and (min-width: 601px) {
+  .mobMenu, .navMenu {
+    display: none !important;
+  }
+  .desktopMenu, .desktopMenuBtn {
+    display: flex !important;
+  }
+}
+
+/* Footer mobile adjustments */
+@media screen and (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    font-size: 0.95rem;
+    padding: 1rem 0.5rem;
+    text-align: center;
+  }
+  .footer-content {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+  .footer-right ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0;
+  }
+}
+
+body {
+    padding-top: 5.5rem;
 }
