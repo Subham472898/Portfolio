@@ -1,0 +1,326 @@
+#contactPage {
+    min-height: 60vh;
+    width: 100vw;
+    max-width: 75rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, #111 0%, #232526 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: background 0.3s, color 0.3s;
+}
+
+.contactPageTitle {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.clientDesc {
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.clientImgs {
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.clientImg {
+    object-fit: cover;
+    width: 23%;
+    min-width: 9rem;
+    margin: auto;
+    padding: 0.25rem;
+}
+
+#clients {
+    padding: 2rem;
+}
+
+.contactDesc {
+    padding: 1rem;
+    font-size: medium;
+    font-weight: 300;
+}
+
+.contactForm {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    max-width: 60rem;
+}
+
+.name, .email, .msg {
+    font-size: medium;
+    width: 100%;
+    max-width: 40rem;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    background: rgb(40, 40, 40);
+}
+
+.submitBtn {
+    background: white;
+    border: none;
+    border-radius: 0.5rem;
+    margin: 2rem;
+    padding: 0.75rem 3.5rem;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.link {
+    object-fit: cover;
+    height: 3rem;
+    width: 3rem;
+    margin: 0 0.75rem;
+}
+
+#certification {
+    background: #000 !important;
+    color: #fff !important;
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background 0.3s, color 0.3s;
+}
+
+.certificationList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+    width: 100vw;
+    max-width: 1200px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.certificationList li {
+    flex: 1 1 320px;
+    min-width: 280px;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: #232526;
+    color: #fff;
+    border-radius: 2rem;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+    margin: 1rem auto;
+    padding: 1.5rem 2rem;
+    font-size: 1.08rem;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.certificationList li:hover {
+    background: #ffe066;
+    color: #232526;
+    transform: scale(1.08);
+}
+
+.certificationList li:active {
+    transform: scale(0.96);
+    border-radius: 2rem;
+}
+
+.certLink {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 18px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+
+.certLink:hover {
+    background: #0056b3;
+}
+
+.certBtn {
+    background: #ffe066;
+    color: #232526;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.certBtn:hover {
+    background: #232526;
+    color: #ffe066;
+    transform: scale(1.08);
+}
+
+.certBtn:active {
+    transform: scale(0.96);
+}
+
+/* Light theme styles */
+.light-theme #certification {
+    background: linear-gradient(135deg, #fff 0%, #e0e7ff 100%);
+    color: #222;
+}
+
+.light-theme .certificationList li {
+    background: #fff;
+    color: #222;
+}
+
+.light-theme .certificationList li:hover {
+    background: #ffe066;
+    color: #232526;
+}
+
+.light-theme .certBtn {
+    background: #ffe066;
+    color: #232526;
+}
+
+.light-theme .certBtn:hover {
+    background: #232526;
+    color: #ffe066;
+}
+
+#contact {
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    padding: 32px 24px;
+    margin-bottom: 32px;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+.contactPageTitle, .contactDesc {
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.contactForm {
+    background: #2c2c2c;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+    padding: 2rem;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.contactForm:hover {
+    background: #333;
+    box-shadow: 0 8px 32px rgba(255, 255, 0, 0.15);
+}
+
+.name, .email, .msg {
+    background: #232526;
+    color: #fff;
+    border: 1px solid #ffe066;
+    transition: background 0.3s, color 0.3s;
+}
+
+.name:hover, .email:hover, .msg:hover {
+    background: #ffe066;
+    color: #232526;
+}
+
+.submitBtn {
+    background-color: #fff;
+    color: #232526;
+    border: 1px solid #ffe066;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    font-weight: 500;
+}
+
+.submitBtn:hover {
+    background-color: #ffe066;
+    color: #232526;
+}
+
+/* Light theme styles */
+.light-theme #contactPage {
+    background: linear-gradient(135deg, #fff 0%, #e0e7ff 100%);
+    color: #222;
+}
+
+.light-theme #contact {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e0e7ff 100%);
+    color: #222;
+}
+
+.light-theme .contactPageTitle, .light-theme .contactDesc {
+    color: #222;
+}
+
+.light-theme .contactForm {
+    background: #fff;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+
+.light-theme .contactForm:hover {
+    background: #f0f0f0;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+}
+
+.light-theme .name, .light-theme .email, .light-theme .msg {
+    background: #232526;
+    color: #fff;
+}
+
+.light-theme .name:hover, .light-theme .email:hover, .light-theme .msg:hover {
+    background: #ffe066;
+    color: #232526;
+}
+
+.light-theme .submitBtn {
+    background-color: #232526;
+    color: #fff;
+    border: 1px solid #232526;
+}
+
+.light-theme .submitBtn:hover {
+    background-color: #ffe066;
+    color: #232526;
+}
+
+#certification, #contactPage {
+    background: #000 !important;
+    color: #fff !important;
+}

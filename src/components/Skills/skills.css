@@ -1,0 +1,100 @@
+#skills {
+    width: 100vw;
+    min-height: 100vh;
+    background: #000 !important;
+    color: #fff !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, color 0.3s;
+    padding-top: 2.5rem;
+}
+
+.light-theme #skills {
+    background: #fff;
+    color: #222;
+}
+
+.skillTitle {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    color: inherit;
+    text-align: center;
+    transition: color 0.3s;
+}
+
+.skillDesc {
+    font-size: 1.1rem;
+    font-weight: 400;
+    max-width: 600px;
+    text-align: center;
+    color: inherit;
+    margin-bottom: 2rem;
+    transition: color 0.3s;
+}
+
+.skillBars {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+    width: 100vw;
+    max-width: 1200px;
+    align-items: stretch;
+}
+
+.skillBar {
+    background: #232526;
+    color: #fff;
+    border-radius: 2rem;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+    padding: 2rem;
+    min-width: 280px;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    flex: 1 1 320px;
+}
+
+.skillBar:hover {
+    background: #ffe066;
+    color: #232526;
+    transform: scale(1.08);
+}
+
+.skillBar:active {
+    transform: scale(0.96);
+    border-radius: 2rem;
+}
+
+.skillBarImg {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: transform 0.3s;
+}
+
+.skillBarImg:hover {
+    transform: scale(1.08) rotate(-2deg);
+}
+
+.skillBarImg:active {
+    transform: scale(0.96) rotate(-2deg);
+}
+
+.light-theme .skillBar {
+    background: #fff;
+    color: #222;
+}
+
+.light-theme .skillBar:hover {
+    background: #ffe066;
+    color: #232526;
+}

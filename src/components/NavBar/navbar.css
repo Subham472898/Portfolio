@@ -1,0 +1,151 @@
+/* Modern Navbar Styles */
+.navbar {
+    background: #ffe066 !important;
+    color: #000 !important;
+    height: 5rem;
+    width: 100vw;
+    margin: 0;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    transition: background 0.3s, color 0.3s;
+}
+
+.light-theme .navbar {
+    background: #fff;
+    color: #222;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+}
+
+.logo {
+    object-fit: cover;
+    height: 3rem;
+    width: 4rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: box-shadow 0.3s;
+}
+.logo:hover {
+    box-shadow: 0 8px 32px rgba(255, 224, 102, 0.15);
+}
+
+.desktopMenuListItem {
+    margin: 1rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: inherit;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 0.2rem;
+}
+.desktopMenuListItem:hover {
+    color: #ffe066;
+    border-bottom: 3px solid #ffe066;
+}
+.desktopMenuListItem[href*="works"]::after {
+    content: "Projects";
+    color: inherit;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-left: 0.5rem;
+}
+.active {
+    color: #ffe066;
+    border-bottom: 3px solid #ffe066;
+}
+
+.desktopMenuBtn {
+    background: #ffe066;
+    color: #232526;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.2rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.3s, color 0.3s;
+}
+.desktopMenuBtn:hover {
+    background: #232526;
+    color: #ffe066;
+}
+
+.themeBtn {
+    background: #232526;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.themeBtn:hover {
+    background: #ffe066;
+    color: #232526;
+}
+
+.mobMenu {
+    display: none;
+    object-fit: cover;
+    height: 1.8rem;
+}
+
+.navMenu {
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    min-width: 15rem;
+    background: #232526;
+    border-radius: 1rem;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+}
+.listItem {
+    color: #fff;
+    padding: 0.5rem 3rem;
+    margin: 0.25rem;
+    background: #232526;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background 0.3s, color 0.3s;
+}
+.listItem:hover {
+    background: #ffe066;
+    color: #232526;
+}
+
+.light-theme .listItem {
+    color: #222;
+    background: #fff;
+}
+.light-theme .listItem:hover {
+    background: #ffe066;
+    color: #232526;
+}
+
+@media screen and (max-width:720px) {
+    .mobMenu {
+        display: flex;
+    }
+    .desktopMenu {
+        display: none;
+    }
+    .desktopMenuBtn {
+        display: none;
+    }
+}

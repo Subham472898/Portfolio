@@ -1,0 +1,269 @@
+#intro {
+    width: 100vw;
+    min-height: 100vh;
+    background: #000 !important;
+    color: #fff !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+.light-theme #intro {
+    background: #fff;
+    color: #222;
+}
+
+.intro-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+    margin-bottom: 2rem;
+    border: 6px solid #ffe066;
+    background: #000;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6rem;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.intro-img:hover {
+    border-color: #232526;
+    transform: scale(1.08) rotate(-2deg);
+    box-shadow: 0 8px 32px rgba(255, 224, 102, 0.15);
+}
+
+.intro-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: inherit;
+    text-align: center;
+    transition: color 0.3s;
+}
+
+.intro-desc {
+    font-size: 1.2rem;
+    font-weight: 400;
+    max-width: 600px;
+    text-align: center;
+    color: inherit;
+    margin-bottom: 2rem;
+    transition: color 0.3s;
+}
+
+.intro-btn {
+    background: #ffe066;
+    color: #232526;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    margin: 2.5rem 0 2.5rem 0;
+}
+
+.intro-btn:hover {
+    background: #232526;
+    color: #ffe066;
+    transform: scale(1.08);
+}
+
+.intro-btn:active {
+    transform: scale(0.96);
+}
+
+.bg {
+    position: absolute;
+    top: -4rem;
+    right: 0;
+    z-index: -1;
+    object-fit: cover;
+    height: 100vh;
+}
+
+.introContent {
+    height: 100vh;
+    width: 100vw;
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hello {
+    font-size: 1.75rem;
+    font-weight: 100;
+}
+
+.introName {
+    color: yellow;
+}
+
+.introPara {
+    font-size: medium;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.btn {
+    background: white;
+    margin: 1rem 0;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 2rem;
+}
+
+.btnImg {
+    object-fit: cover;
+    margin: 0 0.25rem;
+    height: 1rem;
+}
+
+#intro img {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#intro img:hover {
+    transform: scale(1.05) rotate(-2deg);
+    box-shadow: 0 8px 32px rgba(255, 255, 0, 0.15);
+}
+
+#intro span, #intro p {
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+#intro span:hover, #intro p:hover {
+    color: #ffe066;
+    text-shadow: 0 2px 8px rgba(255, 224, 102, 0.2);
+}
+
+@media screen and (max-width:840px) {
+    .bg {
+        right: -10vw
+    }
+    .introContent {
+        font-size: 10vw;
+    }
+    .hello {
+        font-size: 4.5vw;
+    }
+    
+}
+
+@media screen and (max-width:480px) {
+    .bg {
+        right: -20vw
+    }
+}
+
+body {
+  background: linear-gradient(135deg, #ffffff 0%, #414345 100%);
+  color: #fff;
+  transition: background 0.3s, color 0.3s;
+}
+.light-theme body {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e0e7ff 100%);
+  color: #222;
+}
+
+/* Section containers */
+#intro, #skills, #works, #certification, #contactPage, footer {
+  transition: background 0.3s, color 0.3s;
+}
+#intro, #skills, #works, #certification, #contactPage {
+    min-height: 60vh;
+    width: 100vw;
+    max-width: 75rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: background 0.3s, color 0.3s;
+}
+#skills {
+    background: #000 !important;
+    color: #fff !important;
+}
+#works {
+    background: #000 !important;
+    color: #fff !important;
+}
+.light-theme #intro, .light-theme #skills, .light-theme #works, .light-theme #certification, .light-theme #contactPage, .light-theme footer {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e0e7ff 100%);
+  color: #ffffff;
+}
+.light-theme #intro, .light-theme #skills, .light-theme #works, .light-theme #certification, .light-theme #contactPage {
+    background: linear-gradient(135deg, #fff 0%, #e0e7ff 100%);
+    color: #ffffff;
+}
+
+/* Headings and text */
+#intro span, #intro p, .skillTitle, .skillDesc, .worksTitle, .worksDesc, .contactPageTitle, .contactDesc, .footer, .certificationList li {
+  transition: color 0.3s, text-shadow 0.3s;
+}
+#intro span:hover, #intro p:hover, .skillTitle:hover, .skillDesc:hover, .worksTitle:hover, .worksDesc:hover, .contactPageTitle:hover, .contactDesc:hover, .footer:hover, .certificationList li:hover {
+  color: #ffe066;
+  text-shadow: 0 2px 8px rgba(255, 224, 102, 0.2);
+}
+.light-theme #intro span, .light-theme #intro p, .light-theme .skillTitle, .light-theme .skillDesc, .light-theme .worksTitle, .light-theme .worksDesc, .light-theme .contactPageTitle, .light-theme .contactDesc, .light-theme .footer, .light-theme .certificationList li {
+  color: #ffffff;
+}
+.light-theme #intro span:hover, .light-theme #intro p:hover, .light-theme .skillTitle:hover, .light-theme .skillDesc:hover, .light-theme .worksTitle:hover, .light-theme .worksDesc:hover, .light-theme .contactPageTitle:hover, .light-theme .contactDesc:hover, .light-theme .footer:hover, .light-theme .certificationList li:hover {
+  color: #007bff;
+  text-shadow: 0 2px 8px rgba(0,123,255,0.15);
+}
+
+/* Images */
+#intro img, .worksImg, .skillBarImg {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+#intro img:hover, .worksImg:hover, .skillBarImg:hover {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 8px 32px rgba(255, 255, 0, 0.15);
+}
+.light-theme #intro img:hover, .light-theme .worksImg:hover, .light-theme .skillBarImg:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+}
+
+/* Buttons */
+.projectLink, .workBtn, .certBtn, .submitBtn, .themeBtn {
+  background-color: #fff;
+  color: #232526;
+  border: 1px solid #ffe066;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-weight: 500;
+}
+.projectLink:hover, .workBtn:hover, .certBtn:hover, .submitBtn:hover, .themeBtn:hover {
+  background-color: #ffe066;
+  color: #232526;
+}
+.light-theme .projectLink, .light-theme .workBtn, .light-theme .certBtn, .light-theme .submitBtn, .light-theme .themeBtn {
+  background-color: #ffffff;
+  color: #fff;
+  border: 1px solid #232526;
+}
+.light-theme .projectLink:hover, .light-theme .workBtn:hover, .light-theme .certBtn:hover, .light-theme .submitBtn:hover, .light-theme .themeBtn:hover {
+  background-color: #007bff;
+  color: #fff;
+}

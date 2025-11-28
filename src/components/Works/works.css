@@ -1,0 +1,171 @@
+#works {
+    width: 100vw;
+    min-height: 100vh;
+    background: #000 !important;
+    color: #fff !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+.light-theme #works {
+    background: #fff;
+    color: #222;
+}
+
+.worksTitle {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    color: inherit;
+    text-align: center;
+    transition: color 0.3s;
+}
+
+.worksDesc {
+    font-size: 1.1rem;
+    font-weight: 400;
+    max-width: 600px;
+    text-align: center;
+    color: inherit;
+    margin-bottom: 2rem;
+    transition: color 0.3s;
+}
+
+.worksImgs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+    width: 100vw;
+    max-width: 1200px;
+}
+
+.projectBox {
+    flex: 1 1 320px;
+    min-width: 280px;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: #232526;
+    color: #fff;
+    border-radius: 2rem;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+    padding: 2rem;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.projectBox:hover {
+    background: #ffe066;
+    color: #232526;
+    transform: scale(1.08);
+}
+
+.projectBox:active {
+    transform: scale(0.96);
+    border-radius: 2rem;
+}
+
+.worksImg {
+    width: 100%;
+    max-width: 220px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: transform 0.3s;
+}
+
+.worksImg:hover {
+    transform: scale(1.08) rotate(-2deg);
+    box-shadow: 0 8px 32px rgba(255, 224, 102, 0.15);
+}
+
+.worksImg:active {
+    transform: scale(0.96) rotate(-2deg);
+}
+
+.projectLink {
+    background: #ffe066;
+    color: #232526;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.projectLink:hover {
+    background: #232526;
+    color: #ffe066;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    transform: scale(1.08);
+}
+
+.projectLink:active {
+    transform: scale(0.96);
+}
+
+.light-theme .projectBox {
+    background: #fff;
+    color: #222;
+}
+
+.light-theme .projectBox:hover {
+    background: #ffe066;
+    color: #232526;
+}
+
+@media screen and (max-width:585px) {
+    .worksImg {
+        height: 48vw;
+    }
+}
+
+/* Light theme styles */
+.light-theme #works {
+    background: linear-gradient(135deg, #fff 0%, #e0e7ff 100%);
+    color: #222;
+}
+
+.light-theme .worksTitle,
+.light-theme .worksDesc {
+    color: #222;
+}
+
+.light-theme .projectBox {
+    background: #fff;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+
+.light-theme .projectBox:hover {
+    background: #f0f0f0;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+}
+
+.light-theme .worksImg {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.light-theme .projectLink,
+.light-theme .workBtn {
+    background-color: #232526;
+    color: #fff;
+    border: 1px solid #232526;
+}
+
+.light-theme .projectLink:hover,
+.light-theme .workBtn:hover {
+    background-color: #ffe066;
+    color: #232526;
+}
