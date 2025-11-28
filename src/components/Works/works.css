@@ -201,4 +201,34 @@
         display: block;
         position: static;
     }
+    .certificationTitle {
+        font-size: 2rem;
+        padding: 0 1rem;
+        text-align: center;
+        word-break: break-word;
+    }
+    .certificationDesc {
+        font-size: 1rem;
+        padding: 0 1rem;
+        text-align: center;
+        max-width: 95vw;
+        word-break: break-word;
+    }
+    .certificationImgs {
+        flex-direction: column;
+        gap: 1.2rem;
+        width: 100vw;
+        max-width: 100vw;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .certificationBox {
+        width: 90vw;
+        max-width: 95vw;
+        margin: 1.2rem auto;
+        box-sizing: border-box;
+        display: block;
+        position: static;
+    }
 }
