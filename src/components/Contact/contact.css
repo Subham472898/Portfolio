@@ -90,16 +90,23 @@
     margin: 0 0.75rem;
 }
 
+/* -------------------- CERTIFICATION SECTION -------------------- */
+
 #certification {
     background: #000 !important;
     color: #fff !important;
     width: 100vw;
-min-height: 100vh;// removes full-screen height
-     font-size: 20px;   /
+    min-height: 100vh; /* removes full-screen height */
+    font-size: 20px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     transition: background 0.3s, color 0.3s;
+}
+
+/* Make ONLY the Certifications title smaller */
+#certification .contactPageTitle {
+    font-size: 2rem; /* smaller title */
 }
 
 .certificationList {
@@ -185,7 +192,8 @@ min-height: 100vh;// removes full-screen height
     transform: scale(0.96);
 }
 
-/* Light theme styles */
+/* -------------------- LIGHT THEME -------------------- */
+
 .light-theme #certification {
     background: linear-gradient(135deg, #fff 0%, #e0e7ff 100%);
     color: #222;
@@ -211,6 +219,8 @@ min-height: 100vh;// removes full-screen height
     color: #ffe066;
 }
 
+/* -------------------- CONTACT SECTION -------------------- */
+
 #contact {
     background: linear-gradient(135deg, #232526 0%, #414345 100%);
     color: #fff;
@@ -230,7 +240,7 @@ min-height: 100vh;// removes full-screen height
 .contactForm {
     background: #2c2c2c;
     border-radius: 12px;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 16px rgba(255, 255, 0, 0.15);
     padding: 2rem;
     margin: 1rem auto;
     display: flex;
@@ -275,7 +285,7 @@ min-height: 100vh;// removes full-screen height
     color: #232526;
 }
 
-/* Light theme styles */
+/* Light theme contact styles */
 .light-theme #contactPage {
     background: linear-gradient(135deg, #fff 0%, #e0e7ff 100%);
     color: #222;
@@ -286,7 +296,8 @@ min-height: 100vh;// removes full-screen height
     color: #222;
 }
 
-.light-theme .contactPageTitle, .light-theme .contactDesc {
+.light-theme .contactPageTitle, 
+.light-theme .contactDesc {
     color: #222;
 }
 
@@ -300,12 +311,16 @@ min-height: 100vh;// removes full-screen height
     box-shadow: 0 8px 32px rgba(0,0,0,0.10);
 }
 
-.light-theme .name, .light-theme .email, .light-theme .msg {
+.light-theme .name, 
+.light-theme .email, 
+.light-theme .msg {
     background: #232526;
     color: #fff;
 }
 
-.light-theme .name:hover, .light-theme .email:hover, .light-theme .msg:hover {
+.light-theme .name:hover, 
+.light-theme .email:hover, 
+.light-theme .msg:hover {
     background: #ffe066;
     color: #232526;
 }
@@ -321,7 +336,9 @@ min-height: 100vh;// removes full-screen height
     color: #232526;
 }
 
-#certification, #contactPage {
+/* Global override */
+#certification, 
+#contactPage {
     background: #000 !important;
     color: #fff !important;
 }
